@@ -13,7 +13,9 @@ function ToastShelf() {
       role="region"
       aria-live="polite">
       {toasts.map((toast) => (
-        <Toast key={toast.id} dismissToast={dismissToast} {...toast} />
+        <li key={toast.id} className={styles.toastWrapper}>
+          <Toast dismissToast={dismissToast} {...toast} />
+        </li>
       ))}
     </ol>
   );
